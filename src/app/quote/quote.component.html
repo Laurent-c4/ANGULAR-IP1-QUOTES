@@ -1,1 +1,9 @@
-<p>quote works!</p>
+<div>
+    <h1>POPULAR QUOTES!!!</h1>
+    <hr>
+    <ul>
+      <li *ngFor='let quote of quotes'>
+        {{quote.quoteText}}
+      </li>
+    </ul>
+  </div>
