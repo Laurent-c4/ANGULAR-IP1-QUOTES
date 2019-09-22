@@ -1,10 +1,14 @@
 <div>
-    <h1>POPULAR QUOTES!!!</h1>
-    <hr>
-    <ul>
-      <li *ngFor='let quote of quotes'>
+  <h1>POPULAR QUOTES!!!</h1>
+  <hr>
+  <ul>
+    <div *ngFor='let quote of quotes; let i=index'>
+      <li>
         {{quote.quoteText}}
-        <app-quote-details [quote]='quote'></app-quote-details>
       </li>
-    </ul>
-  </div>
+      <button (click)='toggleDetails(i)'>Toggle Details</button>
+      <app-quote-details *ngIf='quote.showDetails' [quote]='quote'></app-quote-details>
+    </div>
+
+  </ul>
+</div>

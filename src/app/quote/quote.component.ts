@@ -11,6 +11,10 @@ export class QuoteComponent implements OnInit {
     new Quote(1, "Don't cry because it's over, smile because it happened.",10, 5, "Dr. Seuss", new Date(2019, 8, 22)),
   ];
 
+  toggleDetails(index){
+    this.quotes[index].showDetails = !this.quotes[index].showDetails;
+  }
+
   constructor() { }
 
   ngOnInit() {
