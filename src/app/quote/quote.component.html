@@ -3,12 +3,19 @@
   <hr>
   <div class="row">
     <div class="col-md-6">
-        <div *ngFor='let quote of quotes; let i=index'>
-            {{quote.quoteText}}
-          <button (click)='toggleDetails(i)'>Toggle Details</button>
-          <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (isLike)='likeQuote($event,i)' (isDislike)='dislikeQuote($event,i)' (isDelete)='deleteQuote($event,i)'>
+      <div *ngFor='let quote of quotes; let i=index'>
+        <div class= "card card-edit">
+          <div class="card-body">
+          {{quote.quoteText}}
+          <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (isLike)='likeQuote($event,i)'
+            (isDislike)='dislikeQuote($event,i)' (isDelete)='deleteQuote($event,i)'>
           </app-quote-details>
         </div>
+        <div class="card-footer">
+            <button (click)='toggleDetails(i)'>View Quote Details</button>
+        </div>
+        </div><br>
+      </div>
     </div>
     <div class="col-md-6">
       <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
