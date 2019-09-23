@@ -1,6 +1,10 @@
 h1 {
     text-align: center; 
 }
-card-body {
+.card-body {
     background: transparent;
+}
+
+.quote {
+    font-size: 50px;
 }

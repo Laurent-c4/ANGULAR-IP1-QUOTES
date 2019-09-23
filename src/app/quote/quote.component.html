@@ -6,7 +6,7 @@
       <div *ngFor='let quote of quotes; let i=index'>
         <div class= "card card-edit">
           <div class="card-body">
-          {{quote.quoteText}}
+          <span class="quote">{{quote.quoteText}}</span>
           <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (isLike)='likeQuote($event,i)'
             (isDislike)='dislikeQuote($event,i)' (isDelete)='deleteQuote($event,i)'>
           </app-quote-details>
