@@ -11,6 +11,13 @@ export class QuoteComponent implements OnInit {
     new Quote(1, "Don't cry because it's over, smile because it happened.",10, 5, "Dr. Seuss", new Date(2019, 8, 22)),
   ];
 
+  addNewQuote(quote){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1;
+    quote.completeDate = new Date(quote.completeDate)
+    this.quotes.push(quote)
+  }
+
   toggleDetails(index){
     this.quotes[index].showDetails = !this.quotes[index].showDetails;
   }
