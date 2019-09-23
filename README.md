@@ -8,6 +8,8 @@ This is a website app for reading and posting popular quotes. It was generated w
 ## Website Overview
 ![Image description](assets/quotes_screenshot.png)
 
+#### Visit website for more interactivity https://laurent-c4.github.io/ANGULAR-IP1-QUOTES/
+
 ## Setup/Installation Requirements
 * Install Node Version Manager, Nodejs and Node Package Manager
 * Install angular CLI
