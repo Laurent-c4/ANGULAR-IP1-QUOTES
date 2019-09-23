@@ -9,12 +9,13 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
   quotes:Quote[]=[
     new Quote(1, "Don't cry because it's over, smile because it happened.",10, 5, "Dr. Seuss", new Date(2019, 8, 22)),
+    new Quote(1, "Don't cry because it's over, smile because it happened.",10, 5, "Dr. Seuss", new Date(2019, 8, 20))
   ];
 
   addNewQuote(quote){
     let quoteLength = this.quotes.length;
     quote.id = quoteLength+1;
-    quote.completeDate = new Date(quote.completeDate)
+    quote.date = new Date(quote.date)
     this.quotes.push(quote)
   }
 
