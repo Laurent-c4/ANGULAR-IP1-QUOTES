@@ -37,7 +37,7 @@ export class QuoteComponent implements OnInit {
 
   dislikeQuote(isDislike, index){
     if (isDislike) {
-      this.quotes[index].downvotes-=1;
+      this.quotes[index].downvotes+=1;
     }
   }
 
